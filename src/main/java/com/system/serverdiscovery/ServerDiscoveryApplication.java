@@ -1,4 +1,4 @@
-package com.order.management.system.serverdiscovery;
+package com.system.serverdiscovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

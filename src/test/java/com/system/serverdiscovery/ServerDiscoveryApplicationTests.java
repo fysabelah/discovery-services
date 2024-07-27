@@ -1,4 +1,4 @@
-package com.order.management.system.serverdiscovery;
+package com.system.serverdiscovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -3,7 +3,7 @@
 #
 FROM maven:3.9.6-amazoncorretto-21 AS build
 
-WORKDIR /order-management
+WORKDIR /server-discovery
 
 COPY pom.xml .
 RUN mvn -B dependency:go-offline
@@ -16,10 +16,10 @@ RUN mvn -B package -DskipTests
 #
 FROM amazoncorretto:21-alpine-jdk
 
-WORKDIR /order-management
+WORKDIR /server-discovery
 
-COPY --from=build /order-management/target/*.jar ./order-management-server.jar
+COPY --from=build /server-discovery/target/*.jar ./server-discovery.jar
 
 EXPOSE 7070
 
-ENTRYPOINT ["java","-jar","order-management-server.jar"]
+ENTRYPOINT ["java","-jar","server-discovery.jar"]
